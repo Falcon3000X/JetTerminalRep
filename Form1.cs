@@ -14,11 +14,12 @@ namespace JetTerminal
 {
     public partial class Form1 : MaterialForm
     {
+        MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+
         public Form1()
         {
             InitializeComponent();
 
-            var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
@@ -26,6 +27,8 @@ namespace JetTerminal
 
         }
 
-      
+
+
+
     }
 }
