@@ -8,10 +8,16 @@ namespace JetTerminal.Clients_class
 {
     public class Client
     {
+        public int ID { get; private set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Product { get; set; }
         public string Link { get; set; }
+
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
+        public Client() { }
 
         /// <summary>
         /// Constructor for full data input
@@ -34,11 +40,16 @@ namespace JetTerminal.Clients_class
         /// <param name="email"></param>
         /// <param name="link"></param>
         /// <param name="product"></param>
-        public Client(string email,string link,string product)
+        public Client(string email, string link, string product)
         {
             this.Email = email;
             this.Link = link;
             this.Product = product;
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {Name} | Product: {Product} | Email: {Email} | Link: {Link}";
         }
 
     }

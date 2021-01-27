@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clients class\Client.cs" />
+    <Compile Include="Clients class\Clients.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
