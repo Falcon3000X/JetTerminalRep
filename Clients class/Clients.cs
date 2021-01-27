@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace JetTerminal.Clients_class
 {
@@ -47,9 +49,35 @@ namespace JetTerminal.Clients_class
             }
         }
 
+        /// <summary>
+        /// Serialize all clients to xml file 
+        /// </summary>
+        public void WriteToXml()
+        {
+            // Formatter for List<Clients>
+            XmlSerializer formatter = new XmlSerializer(typeof(List<Client>));
 
+            // Stream wich will write all data to file DataClients.xml
+            using (FileStream fs = new FileStream("DataClients.xml", FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(fs, Clients);
+            }
+        }
 
+        /// <summary>
+        /// Deserialize all clients to List<Clients> when programm start
+        /// </summary>
+        public void WriteFromXml()
+        {
+            // Formatter for List<Clients>
+            XmlSerializer formatter = new XmlSerializer(typeof(List<Client>));
 
+            // All clients will deserialize from "DataClients.xml" to Clients.
+            using (FileStream fs = new FileStream("DataClients.xml", FileMode.OpenOrCreate))
+            {
+                Clients = (List<Client>)formatter.Deserialize(fs);
+            }
+        }
 
     }
 }

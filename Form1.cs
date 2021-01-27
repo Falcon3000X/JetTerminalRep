@@ -28,7 +28,9 @@ namespace JetTerminal
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
             // ===========================================================================================================================================
 
-
+            
+            Clients.WriteFromXml(); // Download all files from .xml 
+            SyncListBoxWithList(); // Synchronize List<Clients> with list box
         }
 
         /// <summary>
@@ -114,14 +116,9 @@ namespace JetTerminal
             textBoxProduct.Text = "";
         }
 
-
-
-
-
-
-
-
-
-
+        private void loadClientsToFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clients.WriteToXml();
+        }
     }
 }

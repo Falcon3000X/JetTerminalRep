@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace JetTerminal.Clients_class
-{
+{          
+    [Serializable]
     public class Client
     {
-        public int ID { get; private set; }
+
         public string Name { get; set; }
         public string Email { get; set; }
         public string Product { get; set; }
@@ -47,6 +48,11 @@ namespace JetTerminal.Clients_class
             this.Product = product;
         }
 
+
+        /// <summary>
+        /// Show info in list box
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Name: {Name} | Product: {Product} | Email: {Email} | Link: {Link}";

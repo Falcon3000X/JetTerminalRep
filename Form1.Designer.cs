@@ -43,6 +43,7 @@ namespace JetTerminal
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadClientsToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -176,6 +177,8 @@ namespace JetTerminal
             // 
             // menuToolStripMenuItem
             // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadClientsToFileToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -185,6 +188,13 @@ namespace JetTerminal
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
             this.infoToolStripMenuItem.Text = "About Jet Terminal";
+            // 
+            // loadClientsToFileToolStripMenuItem
+            // 
+            this.loadClientsToFileToolStripMenuItem.Name = "loadClientsToFileToolStripMenuItem";
+            this.loadClientsToFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadClientsToFileToolStripMenuItem.Text = "Load clients to file";
+            this.loadClientsToFileToolStripMenuItem.Click += new System.EventHandler(this.loadClientsToFileToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -223,6 +233,7 @@ namespace JetTerminal
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadClientsToFileToolStripMenuItem;
     }
 }
 
