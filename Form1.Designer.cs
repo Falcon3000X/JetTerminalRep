@@ -157,7 +157,7 @@ namespace JetTerminal
             this.listBoxClients.ItemHeight = 19;
             this.listBoxClients.Location = new System.Drawing.Point(474, 79);
             this.listBoxClients.Name = "listBoxClients";
-            this.listBoxClients.Size = new System.Drawing.Size(457, 346);
+            this.listBoxClients.Size = new System.Drawing.Size(642, 498);
             this.listBoxClients.TabIndex = 0;
             // 
             // menuStrip1
@@ -168,10 +168,10 @@ namespace JetTerminal
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.infoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 426);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 589);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(943, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1128, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -200,13 +200,14 @@ namespace JetTerminal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 450);
+            this.ClientSize = new System.Drawing.Size(1128, 613);
             this.Controls.Add(this.listBoxClients);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Sizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JetTerminal";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

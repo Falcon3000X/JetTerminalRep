@@ -26,12 +26,14 @@ namespace JetTerminal
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
-            // ===========================================================================================================================================
+            // ========================================================================================================================================
 
             
-            Clients.WriteFromXml(); // Download all files from .xml 
-            SyncListBoxWithList(); // Synchronize List<Clients> with list box
+            //Clients.WriteFromXml(); // Download all files from .xml 
+            //SyncListBoxWithList(); // Synchronize List<Clients> with list box
         }
+
+
 
         /// <summary>
         /// Button for adding new client
@@ -58,8 +60,11 @@ namespace JetTerminal
                     // Add new client to list
                     Clients.AddClient(client);
 
+
                     // Syncronize list with list box
                     SyncListBoxWithList();
+
+                    Clients.WriteToXml();
 
                     // Clear all text boxes
                     ClearTextBoxes();
@@ -77,8 +82,12 @@ namespace JetTerminal
                     // Add new client to list
                     Clients.AddClient(client);
 
+                    //Clients.WriteOneToXml(client);
+
                     // Syncronize list with list box
                     SyncListBoxWithList();
+
+                    Clients.WriteToXml();
 
                     // Clear all text boxes
                     ClearTextBoxes();
@@ -89,6 +98,8 @@ namespace JetTerminal
                 MessageBox.Show(ex.Message, "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         /// <summary>
         /// Clear list box and than synchronize it with list.
@@ -105,6 +116,8 @@ namespace JetTerminal
             }
         }
 
+
+
         /// <summary>
         /// Clear all text boxes
         /// </summary>
@@ -115,6 +128,9 @@ namespace JetTerminal
             textBoxName.Text = "";
             textBoxProduct.Text = "";
         }
+
+
+
 
         private void loadClientsToFileToolStripMenuItem_Click(object sender, EventArgs e)
         {

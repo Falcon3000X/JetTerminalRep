@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace JetTerminal.Clients_class
-{          
+{
     [Serializable]
     public class Client
     {
@@ -14,6 +14,8 @@ namespace JetTerminal.Clients_class
         public string Email { get; set; }
         public string Product { get; set; }
         public string Link { get; set; }
+
+
 
         /// <summary>
         /// Empty constructor
@@ -48,6 +50,10 @@ namespace JetTerminal.Clients_class
             this.Product = product;
         }
 
+        public void SendMail()
+        {
+
+        }
 
         /// <summary>
         /// Show info in list box

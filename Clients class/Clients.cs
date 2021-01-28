@@ -20,7 +20,8 @@ namespace JetTerminal.Clients_class
         /// <returns></returns>
         public bool IsNewClient(Client client)
         {
-            bool is_new = true;
+            bool is_new = true; // Set false if the same client already exist.
+
 
             foreach (var person in Clients)
             {
@@ -30,7 +31,9 @@ namespace JetTerminal.Clients_class
                     is_new = false;
                 }
             }
-            return is_new;
+
+            return is_new; // If return true than client will added to list.
+
         }
 
         /// <summary>
@@ -39,15 +42,40 @@ namespace JetTerminal.Clients_class
         /// <param name="client"></param>
         public void AddClient(Client client)
         {
-            if (IsNewClient(client) == true)
+            try
             {
-                Clients.Add(client);
+                if (IsNewClient(client) == true)
+                {
+                    Clients.Add(client);
+                }
+                else
+                {
+                    MessageBox.Show("This client already exist!", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("This client already exist!", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        /// <summary>
+        /// Delete client if it`s already exist.
+        /// </summary>
+        /// <param name="client"></param>
+        public void DeleteClient(Client client)
+        {
+            try
+            {
+                if (IsNewClient(client) == false)
+                    Clients.Remove(client);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
 
         /// <summary>
         /// Serialize all clients to xml file 
@@ -79,5 +107,21 @@ namespace JetTerminal.Clients_class
             }
         }
 
+        public void WriteOneToXml(Client client)
+        {
+            XmlSerializer formatter = new XmlSerializer(typeof(Client));
+
+            try
+            {
+                using (FileStream fs = new FileStream("DataClients.xml", FileMode.OpenOrCreate))
+                {
+                    formatter.Serialize(fs, client);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
