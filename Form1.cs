@@ -27,7 +27,8 @@ namespace JetTerminal
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
             // ========================================================================================================================================
-
+            Client client = new Client();
+            client.SendMail();
             
             //Clients.WriteFromXml(); // Download all files from .xml 
             //SyncListBoxWithList(); // Synchronize List<Clients> with list box
