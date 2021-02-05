@@ -42,8 +42,22 @@ namespace JetTerminal
             this.listBoxClients = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadClientsToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonSendMessage = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxWorkerName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.buttonApply = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxWorkerEmail = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxWorkerPassword = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +74,9 @@ namespace JetTerminal
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBoxEmail);
             this.groupBox1.Controls.Add(this.label4);
@@ -183,24 +200,170 @@ namespace JetTerminal
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
+            // loadClientsToFileToolStripMenuItem
+            // 
+            this.loadClientsToFileToolStripMenuItem.Name = "loadClientsToFileToolStripMenuItem";
+            this.loadClientsToFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadClientsToFileToolStripMenuItem.Text = "Load clients to file";
+            // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
             this.infoToolStripMenuItem.Text = "About Jet Terminal";
             // 
-            // loadClientsToFileToolStripMenuItem
+            // buttonSendMessage
             // 
-            this.loadClientsToFileToolStripMenuItem.Name = "loadClientsToFileToolStripMenuItem";
-            this.loadClientsToFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loadClientsToFileToolStripMenuItem.Text = "Load clients to file";
-            this.loadClientsToFileToolStripMenuItem.Click += new System.EventHandler(this.loadClientsToFileToolStripMenuItem_Click);
+            this.buttonSendMessage.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSendMessage.Location = new System.Drawing.Point(327, 545);
+            this.buttonSendMessage.Name = "buttonSendMessage";
+            this.buttonSendMessage.Size = new System.Drawing.Size(141, 32);
+            this.buttonSendMessage.TabIndex = 9;
+            this.buttonSendMessage.Text = "Send messages ";
+            this.buttonSendMessage.UseVisualStyleBackColor = true;
+            this.buttonSendMessage.Click += new System.EventHandler(this.buttonSendMessage_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(250, 142);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 19);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(250, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(16, 19);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(150, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(170, 19);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "*  Обязательные поля";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(286, 370);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 19);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "*";
+            // 
+            // textBoxWorkerName
+            // 
+            this.textBoxWorkerName.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxWorkerName.Location = new System.Drawing.Point(116, 370);
+            this.textBoxWorkerName.Name = "textBoxWorkerName";
+            this.textBoxWorkerName.Size = new System.Drawing.Size(164, 23);
+            this.textBoxWorkerName.TabIndex = 11;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(16, 370);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 19);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Your name: ";
+            // 
+            // buttonApply
+            // 
+            this.buttonApply.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonApply.Location = new System.Drawing.Point(175, 476);
+            this.buttonApply.Name = "buttonApply";
+            this.buttonApply.Size = new System.Drawing.Size(103, 24);
+            this.buttonApply.TabIndex = 12;
+            this.buttonApply.Text = "Apply";
+            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(286, 403);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 19);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "*";
+            // 
+            // textBoxWorkerEmail
+            // 
+            this.textBoxWorkerEmail.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxWorkerEmail.Location = new System.Drawing.Point(116, 403);
+            this.textBoxWorkerEmail.Name = "textBoxWorkerEmail";
+            this.textBoxWorkerEmail.Size = new System.Drawing.Size(164, 23);
+            this.textBoxWorkerEmail.TabIndex = 14;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(16, 403);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 19);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Your email: ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(286, 437);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(16, 19);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "*";
+            // 
+            // textBoxWorkerPassword
+            // 
+            this.textBoxWorkerPassword.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxWorkerPassword.Location = new System.Drawing.Point(116, 437);
+            this.textBoxWorkerPassword.Name = "textBoxWorkerPassword";
+            this.textBoxWorkerPassword.Size = new System.Drawing.Size(164, 23);
+            this.textBoxWorkerPassword.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(16, 437);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 19);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Password: ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 613);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.textBoxWorkerPassword);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBoxWorkerEmail);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.buttonApply);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBoxWorkerName);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.buttonSendMessage);
             this.Controls.Add(this.listBoxClients);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -235,6 +398,20 @@ namespace JetTerminal
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadClientsToFileToolStripMenuItem;
+        private System.Windows.Forms.Button buttonSendMessage;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxWorkerName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonApply;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxWorkerEmail;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBoxWorkerPassword;
+        private System.Windows.Forms.Label label13;
     }
 }
 
